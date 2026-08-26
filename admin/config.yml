@@ -1,7 +1,7 @@
 # Decap CMS ~ https://decapcms.org/
 # Editing happens at /admin/ and commits straight back to this repo.
 #
-# Editors sign in with GitHub and need push access to gabrieldrozdov/oak-hill.
+# Editors sign in with GitHub and need push access to oakhillneighborhoodri/oak-hill.
 # Netlify runs the OAuth handshake, so there is no auth server to host: install
 # the GitHub provider under Site configuration > Access & security > OAuth.
 # (Git Gateway + Netlify Identity would also work, but Git Gateway is deprecated
@@ -9,7 +9,7 @@
 
 backend:
   name: github
-  repo: gabrieldrozdov/oak-hill
+  repo: oakhillneighborhoodri/oak-hill
   branch: main
 
 # Uncomment, run `npx decap-server`, and open /admin/ to edit against local files
