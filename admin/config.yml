@@ -12,7 +12,7 @@ backend:
   repo: oakhillneighborhoodri/oak-hill
   branch: main
 
-# Uncomment, run `npx decap-server`, and open /admin/ to edit against local files
+# Uncomment, run `npx decap-server`, and open /admin/ to edit against local files 
 # instead of the live repo.
 # local_backend: true
 
