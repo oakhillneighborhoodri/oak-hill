@@ -82,7 +82,9 @@ function submitForm(e) {
 			headers: {'Content-Type': 'application/x-www-form-urlencoded'},
 			body: new URLSearchParams(data).toString()
 		};
-	fetch(window.location.pathname, options).then(response => {
+	// netlify routes submissions by the form-name field, not by path, and its docs
+	// say to post to the site root ~ posting to the page's own path can 404
+	fetch('/', options).then(response => {
 		if (!response.ok) {
 			throw new Error(response.status);
 		}
