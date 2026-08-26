@@ -1,0 +1,22 @@
+{
+	"events": [
+		{
+			"date": "2026-10-31",
+			"time": "",
+			"location": "",
+			"name": "Halloween Hootenanny",
+			"description": [
+				"Our annual halloween parade!"
+			]
+		},
+		{
+			"date": "2026-09-12",
+			"time": "All Day",
+			"location": "The full neighborhood!",
+			"name": "Neighborhood Garage Sale",
+			"description": [
+				"A neighborhood-wide garage sale!"
+			]
+		}
+	]
+}

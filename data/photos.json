@@ -1,0 +1,36 @@
+{
+	"photos": [
+		{
+			"image": "/assets/uploads/example-1.jpg",
+			"name": "Dana Whitmore"
+		},
+		{
+			"image": "/assets/uploads/example-2.jpg",
+			"name": "Marcus Reyes"
+		},
+		{
+			"image": "/assets/uploads/example-3.jpg",
+			"name": "Priya Raghavan"
+		},
+		{
+			"image": "/assets/uploads/example-4.jpg",
+			"name": "Sam Oyelaran"
+		},
+		{
+			"image": "/assets/uploads/example-5.jpg",
+			"name": "Anneke Vos"
+		},
+		{
+			"image": "/assets/uploads/example-6.jpg",
+			"name": "Marguerite Okonkwo"
+		},
+		{
+			"image": "/assets/uploads/example-7.jpg",
+			"name": "Gabriel Drozdov"
+		},
+		{
+			"image": "/assets/uploads/example-8.jpg",
+			"name": "Sara Koslosky"
+		}
+	]
+}

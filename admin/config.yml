@@ -1,0 +1,150 @@
+# Decap CMS ~ https://decapcms.org/
+# Editing happens at /admin/ and commits straight back to this repo.
+#
+# Editors sign in with GitHub and need push access to gabrieldrozdov/oak-hill.
+# Netlify runs the OAuth handshake, so there is no auth server to host: install
+# the GitHub provider under Site configuration > Access & security > OAuth.
+# (Git Gateway + Netlify Identity would also work, but Git Gateway is deprecated
+# and frozen, so this avoids building on it.)
+
+backend:
+  name: github
+  repo: gabrieldrozdov/oak-hill
+  branch: main
+
+# Uncomment, run `npx decap-server`, and open /admin/ to edit against local files
+# instead of the live repo.
+# local_backend: true
+
+media_folder: assets/uploads
+public_folder: /assets/uploads
+
+site_url: https://oakhillneighborhood.com
+
+collections:
+  - name: site
+    label: Oak Hill Website
+    files:
+      - name: content
+        label: Page Text
+        file: data/content.json
+        description: The written sections of the Community Calendar and About pages.
+        fields:
+          - name: annual_events
+            label: Annual Events (Community Calendar page)
+            hint: Appears under "Want to help organize or host an event?"
+            widget: markdown
+          - name: history
+            label: History of Oak Hill (About page)
+            hint: Appears under the "History of Oak Hill" heading.
+            widget: markdown
+          - name: credits
+            label: Credits (About page)
+            hint: Appears under the "Credits" heading, above "Interested in joining the committee?"
+            widget: markdown
+
+      - name: events
+        label: Community Calendar
+        file: data/events.json
+        description: Events shown on the calendar grid.
+        fields:
+          - name: events
+            label: Events
+            label_singular: Event
+            widget: list
+            summary: '{{fields.date}} ~ {{fields.name}}'
+            fields:
+              - {name: name, label: Event name, widget: string}
+              - {name: date, label: Date, widget: date, format: 'YYYY-MM-DD'}
+              - {name: time, label: Time, widget: string, required: false, hint: 'For example: 6:00pm, All Day, TBD. Leave blank to show no time.'}
+              - {name: location, label: Location, widget: string, required: false}
+              - name: description
+                label: Description
+                label_singular: Paragraph
+                widget: list
+                field: {name: paragraph, label: Paragraph, widget: text}
+
+      - name: posts
+        label: Bulletin Board
+        file: data/posts.json
+        description: Resident posts. The two welcome posts are built into the site and always sit at the end.
+        fields:
+          - name: posts
+            label: Posts
+            label_singular: Post
+            widget: list
+            summary: '{{fields.date}} ~ {{fields.name}}'
+            fields:
+              - {name: date, label: Date posted, widget: date, format: 'YYYY-MM-DD'}
+              - {name: name, label: Posted by, widget: string}
+              - {name: image, label: Image, widget: image, required: false, hint: 'For an image post. If you add one, the text below is ignored.'}
+              - {name: heading, label: Post title, widget: string, required: false, hint: 'For a text post.'}
+              - name: text
+                label: Post text
+                label_singular: Paragraph
+                widget: list
+                required: false
+                field: {name: paragraph, label: Paragraph, widget: text}
+              - {name: contact, label: Contact email, widget: string, required: false, hint: 'Published with the post.'}
+              - {name: link, label: More information link, widget: string, required: false}
+
+      - name: businesses
+        label: Business Directory
+        file: data/businesses.json
+        description: The "Add your local business!" card is built into the site and always sits first.
+        fields:
+          - name: businesses
+            label: Businesses
+            label_singular: Business
+            widget: list
+            summary: '{{fields.name}}'
+            fields:
+              - {name: name, label: Business name, widget: string}
+              - {name: services, label: Services offered, widget: list, hint: 'Each one becomes a filter button, so reuse existing wording where you can.'}
+              - {name: description, label: Description, widget: text}
+              - {name: address, label: Address, widget: string, required: false}
+              - {name: phone, label: Phone number, widget: string, required: false}
+              - {name: email, label: Email, widget: string, required: false}
+              - {name: website, label: Website, widget: string, required: false}
+
+      - name: locations
+        label: Neighborhood Map
+        file: data/map.json
+        description: Map pins. Latitude and longitude are required ~ look them up before adding a pin.
+        fields:
+          - name: locations
+            label: Locations
+            label_singular: Location
+            widget: list
+            summary: '{{fields.name}} ~ {{fields.type}}'
+            fields:
+              - {name: name, label: Location name, widget: string}
+              - {name: address, label: Address, widget: string}
+              - name: type
+                label: Type
+                widget: select
+                options:
+                  - {label: Food, value: food}
+                  - {label: Shopping, value: shopping}
+                  - {label: Service, value: service}
+                  - {label: Entertainment, value: entertainment}
+                  - {label: Other, value: other}
+              - {name: description, label: Description, widget: text, required: false}
+              - {name: phone, label: Phone number, widget: string, required: false}
+              - {name: url, label: Website, widget: string, required: false}
+              - {name: latitude, label: Latitude, widget: number, value_type: float, step: 0.000001}
+              - {name: longitude, label: Longitude, widget: number, value_type: float, step: 0.000001}
+
+      - name: photos
+        label: Homepage Photos
+        file: data/photos.json
+        description: Photos that scroll across the homepage, credited to whoever sent them in.
+        fields:
+          - name: photos
+            label: Photos
+            label_singular: Photo
+            widget: list
+            summary: '{{fields.name}}'
+            fields:
+              - {name: image, label: Photo, widget: image}
+              - {name: name, label: Submitted by, widget: string}

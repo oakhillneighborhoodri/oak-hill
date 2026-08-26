@@ -1,0 +1,13 @@
+{
+	"businesses": [
+		{
+			"name": "No Replica",
+			"services": [
+				"Design",
+				"Web Development"
+			],
+			"description": "Design + development studio specializing in brand identities, websites, type design, and computational art.",
+			"website": "https://noreplica.com/"
+		}
+	]
+}
