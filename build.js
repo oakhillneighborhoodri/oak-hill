@@ -421,7 +421,7 @@ const formOutro = {
 
 const forms = {
 	photo: {
-		name: 'oak-hill-photo',
+		name: 'Photo',
 		title: '📷 Submit a photo',
 		intro: 'Photos are displayed at random on the website’s homepage, with your name featured alongside them. Please only submit photos that you’ve personally taken!',
 		submit: 'Send us your photo!',
@@ -430,7 +430,7 @@ const forms = {
 		]
 	},
 	event: {
-		name: 'oak-hill-event',
+		name: 'Event',
 		title: '📅 Submit an event',
 		intro: 'Add an event to the Community Calendar, or let us know about one you’d like to help organize.',
 		submit: 'Send us your event!',
@@ -443,7 +443,7 @@ const forms = {
 		]
 	},
 	location: {
-		name: 'oak-hill-location',
+		name: 'Location',
 		title: '📍 Submit a location',
 		intro: 'Add a location to the Neighborhood Map. If you’d rather have something changed or removed from the map, describe it in the last question instead.',
 		submit: 'Send us the location!',
@@ -457,7 +457,7 @@ const forms = {
 		]
 	},
 	post: {
-		name: 'oak-hill-post',
+		name: 'Post',
 		title: '📌 Submit a bulletin board post',
 		intro: 'You can post text or images. Posts stay up for one month, but let us know any time if you’d like yours taken down earlier. AI-generated posters are permitted but highly discouraged!',
 		submit: 'Send us your post!',
@@ -476,7 +476,7 @@ const forms = {
 		]
 	},
 	business: {
-		name: 'oak-hill-business',
+		name: 'Business',
 		title: '💼 Submit a business listing',
 		intro: 'Do you live or work in Oak Hill? Add your business to the local Business Directory. If you want to change or remove a listing that’s already up, describe it in the last question instead.',
 		submit: 'Send us your business!',
@@ -494,7 +494,7 @@ const forms = {
 		]
 	},
 	message: {
-		name: 'oak-hill-message',
+		name: 'Message',
 		title: '📝 Leave us a message',
 		intro: 'Anything you want to tell the Oak Hill Social Committee ~ a question, a correction, a story, or an offer to help.',
 		submit: 'Send us your message!',
