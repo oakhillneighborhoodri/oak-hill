@@ -6,17 +6,17 @@
 			"type": "food",
 			"phone": "401-451-7293",
 			"url": "https://www.watulike.com/",
-			"latitude": 41.857141,
-			"longitude": -71.391269
+			"latitude": 41.85728091825906,
+			"longitude": -71.39146393975741
 		},
 		{
 			"name": "Wildflour Bakery and Cafe",
 			"address": "727 East Ave., Pawtucket, RI 02860",
 			"type": "food",
 			"phone": "401-475-4718",
-			"url": "http://www.wildflourbakerycafe.com/",
-			"latitude": 41.857511,
-			"longitude": -71.390724
+			"url": "https://www.wildflourbakerycafe.com/",
+			"latitude": 41.85827140108589,
+			"longitude": -71.39122226828363
 		},
 		{
 			"name": "Rasoi",
@@ -24,26 +24,26 @@
 			"type": "food",
 			"phone": "401-728-5500",
 			"url": "https://www.rasoirestaurant.com/",
-			"latitude": 41.85759,
-			"longitude": -71.390431
+			"latitude": 41.85822445503406,
+			"longitude": -71.39160783586345
 		},
 		{
 			"name": "Garden Grille",
 			"address": "727 East Ave., Pawtucket, RI 02860",
 			"type": "food",
 			"phone": "401-726-2826",
-			"url": "http://www.gardengrilleri.com/",
-			"latitude": 41.857791,
-			"longitude": -71.390275
+			"url": "https://www.gardengrilleri.com/",
+			"latitude": 41.858251424048774,
+			"longitude": -71.39151462909419
 		},
 		{
 			"name": "Antonio’s Pizza by the Slice",
 			"address": "727 East Ave., Pawtucket, RI 02860",
 			"type": "food",
 			"phone": "401-725-0808",
-			"url": "http://antoniospizza.com/",
-			"latitude": 41.85802,
-			"longitude": -71.390329
+			"url": "https://antoniospizza.com/",
+			"latitude": 41.85821146995295,
+			"longitude": -71.39169031378002
 		},
 		{
 			"name": "Maven’s Delicatessen",
@@ -51,8 +51,8 @@
 			"type": "food",
 			"phone": "401-205-8560",
 			"url": "https://www.mavensdeli.com/",
-			"latitude": 41.858169,
-			"longitude": -71.390568
+			"latitude": 41.85806463844971,
+			"longitude": -71.39229649309674
 		},
 		{
 			"name": "White Owl",
@@ -60,17 +60,17 @@
 			"type": "food",
 			"phone": "401-337-9676",
 			"url": "https://whiteowlpvd.com/",
-			"latitude": 41.856078,
-			"longitude": -71.39153
+			"latitude": 41.85654195946389,
+			"longitude": -71.39149622980128
 		},
 		{
 			"name": "Three Sisters",
 			"address": "1070 Hope St., Providence, RI 02906",
 			"type": "food",
 			"phone": "401-273-7230",
-			"url": "http://www.threesistersri.com/",
-			"latitude": 41.856229,
-			"longitude": -71.391328
+			"url": "https://www.threesistersri.com/",
+			"latitude": 41.85651639975122,
+			"longitude": -71.39155468608766
 		},
 		{
 			"name": "India Restaurant",
@@ -78,17 +78,17 @@
 			"type": "food",
 			"phone": "401-421-2600",
 			"url": "https://www.indiarestaurant.com/",
-			"latitude": 41.85638,
-			"longitude": -71.39153
+			"latitude": 41.85606187993477,
+			"longitude": -71.39180330257892
 		},
 		{
 			"name": "Auntie’s House",
 			"address": "287 Pawtucket Ave., Pawtucket, RI 02860",
 			"type": "food",
 			"phone": "401-420-9055",
-			"url": "http://auntieshouseri.com/",
-			"latitude": 41.867234,
-			"longitude": -71.390586
+			"url": "https://auntieshouseri.com/",
+			"latitude": 41.86742822323618,
+			"longitude": -71.39072376893597
 		},
 		{
 			"name": "La Rumba Restaurant Lounge",
@@ -96,8 +96,8 @@
 			"type": "food",
 			"phone": "401-261-3175",
 			"url": "https://larumba.kwickmenu.com/index.php",
-			"latitude": 41.866487,
-			"longitude": -71.399036
+			"latitude": 41.8666934995927,
+			"longitude": -71.39855695853645
 		},
 		{
 			"name": "Francesca’s On Pawtucket",
@@ -105,17 +105,26 @@
 			"type": "food",
 			"phone": "401-724-9900",
 			"url": "https://www.francescasonpawtucket.com/",
-			"latitude": 41.860019,
-			"longitude": -71.396935
+			"latitude": 41.85984507012995,
+			"longitude": -71.39702188044241
 		},
 		{
 			"name": "The Hive Bar",
-			"address": "545 Pawtucket Ave., Pawtucket, RI 02860",
+			"address": "100 Carver St, Pawtucket, RI 02860",
 			"type": "food",
 			"phone": "401-680-0861",
 			"url": "https://thehivebarri.com/",
-			"latitude": 41.859143,
-			"longitude": -71.397702
+			"latitude": 41.85935706255524,
+			"longitude": -71.3987032768126
+		},
+		{
+			"name": "Discipline Brewing",
+			"address": "545 Pawtucket Ave., Pawtucket, RI 02860",
+			"type": "food",
+			"phone": "401-642-1574",
+			"url": "https://www.disciplinebrewingco.com/",
+			"latitude": 41.859665538613186,
+			"longitude": -71.39850523882863
 		},
 		{
 			"name": "Hangry Kitchen",
@@ -123,34 +132,34 @@
 			"type": "food",
 			"phone": "401-424-5812",
 			"url": "https://hangry-kitchen.com/",
-			"latitude": 41.859273,
-			"longitude": -71.397461
+			"latitude": 41.859372001339146,
+			"longitude": -71.39745011805844
 		},
 		{
 			"name": "10 Rocks Tapas Bar & Restaurant",
 			"address": "1091 Main St., Pawtucket, RI 02860",
 			"type": "food",
 			"phone": "401-728-0800",
-			"url": "http://www.10rockstapasbar.com/",
-			"latitude": 41.860627,
-			"longitude": -71.39909
+			"url": "https://www.10rockstapasbar.com/",
+			"latitude": 41.860400628143694,
+			"longitude": -71.39936142868883
 		},
 		{
 			"name": "Modern Diner",
 			"address": "364 East Ave., Pawtucket, RI 02860",
 			"type": "food",
 			"phone": "401-726-8390",
-			"url": "http://www.themoderndinerri.com/",
-			"latitude": 41.86891,
-			"longitude": -71.386987
+			"url": "https://www.themoderndinerri.com/",
+			"latitude": 41.86885288844941,
+			"longitude": -71.38692020512381
 		},
 		{
 			"name": "Hen n’ Bun",
 			"address": "385 East Ave., Pawtucket, RI 02860",
 			"type": "food",
 			"phone": "401-722-1485",
-			"latitude": 41.869277,
-			"longitude": -71.387066
+			"latitude": 41.86834813097489,
+			"longitude": -71.38747217809978
 		},
 		{
 			"name": "Ramon’s Pizza",
@@ -158,8 +167,8 @@
 			"type": "food",
 			"phone": "401-725-3303",
 			"url": "https://pawtucketramonspizza.com/",
-			"latitude": 41.869039,
-			"longitude": -71.388924
+			"latitude": 41.869798218465895,
+			"longitude": -71.38852896842167
 		},
 		{
 			"name": "Blue Fish Peruvian Restaurant Seafood",
@@ -167,17 +176,44 @@
 			"type": "food",
 			"phone": "401-321-3334",
 			"url": "https://bluefishperuvian.com/",
-			"latitude": 41.872212,
-			"longitude": -71.386064
+			"latitude": 41.8724105624353,
+			"longitude": -71.38604494098894
+		},
+		{
+			"name": "Apna Bazar Food Mart",
+			"address": "282 East Ave, Pawtucket, RI 02860",
+			"type": "food",
+			"phone": "401-724-7200",
+			"url": "",
+			"latitude": 41.87096524949891,
+			"longitude": -71.38678105548064
+		},
+		{
+			"name": "Cantinho Bar & Grill",
+			"address": "82 Pawtucket Ave, Pawtucket, RI 02860",
+			"type": "food",
+			"phone": "401-728-4700",
+			"url": "https://cantinho.restaurant/",
+			"latitude": 41.87115030759868,
+			"longitude": -71.3867747639038
 		},
 		{
 			"name": "Rosa’s Kitchen",
 			"address": "757 Main St., Pawtucket, RI 02860",
 			"type": "food",
 			"phone": "401-475-3023",
-			"url": "http://www.rosaskitchen757.com/",
-			"latitude": 41.870684,
-			"longitude": -71.396013
+			"url": "https://www.rosaskitchen757.com/",
+			"latitude": 41.87059748641941,
+			"longitude": -71.39620541498115
+		},
+		{
+			"name": "El Panal Lounge",
+			"address": "97 Lonsdale Ave, Pawtucket, RI 02860",
+			"type": "food",
+			"phone": "+14017252959",
+			"url": "",
+			"latitude": 41.87107318307083,
+			"longitude": -71.39823657298177
 		},
 		{
 			"name": "Gregg’s",
@@ -185,34 +221,79 @@
 			"type": "food",
 			"phone": "401-831-5700",
 			"url": "https://www.greggsusa.com/",
-			"latitude": 41.855739,
-			"longitude": -71.39983
+			"latitude": 41.85613119605327,
+			"longitude": -71.39931755400673
 		},
 		{
 			"name": "Mimi’s Lounge",
 			"address": "590 Pawtucket Ave., Pawtucket, RI 02860",
 			"type": "food",
 			"url": "https://sites.google.com/view/mimisloungepaw/home",
-			"latitude": 41.85739,
-			"longitude": -71.399127
+			"latitude": 41.85735327771073,
+			"longitude": -71.39904922280684
 		},
 		{
 			"name": "High Motor Bar & Grille",
 			"address": "342 East Ave., Pawtucket, RI 02860",
 			"type": "food",
 			"phone": "401-424-9977",
-			"url": "http://www.highmotorgrille.com/",
-			"latitude": 41.869529,
-			"longitude": -71.387066
+			"url": "https://www.highmotorgrille.com/",
+			"latitude": 41.86949861630836,
+			"longitude": -71.38686063446175
 		},
 		{
 			"name": "Matilda Empanadas",
 			"address": "1005 Main St. #8238, Pawtucket, RI 02860",
 			"type": "food",
 			"phone": "401-436-2490",
-			"url": "http://www.matildari.com/",
-			"latitude": 41.8627,
-			"longitude": -71.399307
+			"url": "https://www.matildari.com/",
+			"latitude": 41.863171324443584,
+			"longitude": -71.39964458870057
+		},
+		{
+			"name": "Friends of Toto",
+			"address": "245 Esten Ave, Pawtucket, RI 02860",
+			"type": "service",
+			"phone": "401-722-8686",
+			"url": "https://www.friendsoftoto.com/",
+			"latitude": 41.86136382515195,
+			"longitude": -71.40206177252114
+		},
+		{
+			"name": "Precision Graphics & Signs",
+			"address": "250 Esten Ave, Pawtucket, RI 02860",
+			"type": "service",
+			"phone": "401-726-1626",
+			"url": "https://www.demandattention.com/",
+			"latitude": 41.861762262736725,
+			"longitude": -71.40164687101208
+		},
+		{
+			"name": "Magic Screen Printing",
+			"address": "250 Esten Ave, Pawtucket, RI 02860",
+			"type": "service",
+			"phone": "401-340-6561",
+			"url": "https://www.magicteesri.com/",
+			"latitude": 41.861317538302806,
+			"longitude": -71.40166449148293
+		},
+		{
+			"name": "Paperworks",
+			"address": "544 West Ave, Pawtucket, RI 02860",
+			"type": "shopping",
+			"phone": "401-728-0414",
+			"url": "https://www.paperworks.com/",
+			"latitude": 41.86097105987551,
+			"longitude": -71.39825540281363
+		},
+		{
+			"name": "Mystery Soup Escape Rooms",
+			"address": "1005 Main St 1202 2nd floor, Pawtucket, RI 02860",
+			"type": "entertainment",
+			"phone": "401-205-1873",
+			"url": "https://mysterysoupescaperooms.com/",
+			"latitude": 41.8627562884516,
+			"longitude": -71.39939938221293
 		},
 		{
 			"name": "Pho Horn’s",
@@ -220,25 +301,25 @@
 			"type": "food",
 			"phone": "401-365-6278",
 			"url": "https://www.phohorns.com/",
-			"latitude": 41.857676,
-			"longitude": -71.402023
+			"latitude": 41.85737723776815,
+			"longitude": -71.40192519037392
 		},
 		{
 			"name": "Butter Day Spa",
 			"address": "750 East Ave., Pawtucket, RI 02860",
 			"type": "service",
-			"url": "http://www.butterdayspa.com/",
-			"latitude": 41.858169,
-			"longitude": -71.39088
+			"url": "https://www.butterdayspa.com/",
+			"latitude": 41.85736227536049,
+			"longitude": -71.39068992386301
 		},
 		{
 			"name": "Marigold Dental Studio",
 			"address": "727 East Ave., Pawtucket, RI 02860",
 			"type": "service",
 			"phone": "401-266-3613",
-			"url": "http://www.marigolddentalstudio.com/",
-			"latitude": 41.85802,
-			"longitude": -71.391119
+			"url": "https://www.marigolddentalstudio.com/",
+			"latitude": 41.85821546536264,
+			"longitude": -71.39180564877269
 		},
 		{
 			"name": "Jala Studio Yoga & Art",
@@ -246,42 +327,42 @@
 			"type": "service",
 			"phone": "401-594-9642",
 			"url": "https://www.jala-studio.com/",
-			"latitude": 41.857791,
-			"longitude": -71.391173
+			"latitude": 41.85824792805924,
+			"longitude": -71.39133492109563
 		},
 		{
 			"name": "A’Dianne Hair Salon",
 			"address": "112 Raleigh Ave., Pawtucket, RI 02860",
 			"type": "service",
-			"latitude": 41.860098,
-			"longitude": -71.386649
+			"latitude": 41.86008506618937,
+			"longitude": -71.3866083902401
 		},
 		{
 			"name": "La Boutique Nails",
 			"address": "1080 Hope St., Providence, RI 02906",
 			"type": "service",
 			"phone": "401-443-2345",
-			"url": "http://laboutiquenails.com/",
-			"latitude": 41.856229,
-			"longitude": -71.391733
+			"url": "https://laboutiquenails.com/",
+			"latitude": 41.856608051503926,
+			"longitude": -71.39146679136852
 		},
 		{
 			"name": "Rag & Bone Bindery",
 			"address": "1088 Main St., Pawtucket, RI 02860",
 			"type": "service",
 			"phone": "401-728-0762",
-			"url": "http://www.ragandbonebindery.com/",
-			"latitude": 41.861195,
-			"longitude": -71.398985
+			"url": "https://www.ragandbonebindery.com/",
+			"latitude": 41.86016788144225,
+			"longitude": -71.39877933734309
 		},
 		{
 			"name": "Express Threading and Skin Studio",
 			"address": "589 Pawtucket Ave., Pawtucket, RI 02860",
 			"type": "service",
 			"phone": "401-712-2873",
-			"url": "http://expressbeautyri.com/",
-			"latitude": 41.858968,
-			"longitude": -71.398063
+			"url": "https://expressbeautyri.com/",
+			"latitude": 41.85773738551228,
+			"longitude": -71.39945979356072
 		},
 		{
 			"name": "Breaktime Bowl and Bar Events",
@@ -289,17 +370,17 @@
 			"type": "service",
 			"phone": "401-312-3850",
 			"url": "https://breaktimebowlandbar.com/",
-			"latitude": 41.863833,
-			"longitude": -71.399443
+			"latitude": 41.863552361400565,
+			"longitude": -71.39959720271528
 		},
 		{
 			"name": "Salk’s Hardware & Marine",
 			"address": "727 East Ave., Pawtucket, RI 02860",
 			"type": "shopping",
 			"phone": "401-305-2200",
-			"url": "http://salkshardware.com/",
-			"latitude": 41.85759,
-			"longitude": -71.391017
+			"url": "https://salkshardware.com/",
+			"latitude": 41.857861870577544,
+			"longitude": -71.39227905873649
 		},
 		{
 			"name": "Homegrown",
@@ -307,17 +388,17 @@
 			"type": "shopping",
 			"phone": "401-541-2880",
 			"url": "https://homegrownpvd.com/",
-			"latitude": 41.85783,
-			"longitude": -71.384024
+			"latitude": 41.85790949814261,
+			"longitude": -71.38424824504396
 		},
 		{
 			"name": "Vicente’s Supermarket",
 			"address": "470 Pawtucket Ave., Pawtucket, RI 02860",
 			"type": "shopping",
 			"phone": "401-834-1641",
-			"url": "http://vicentessupermarket.com/",
-			"latitude": 41.862273,
-			"longitude": -71.394886
+			"url": "https://vicentessupermarket.com/",
+			"latitude": 41.86169575995299,
+			"longitude": -71.39422183710201
 		},
 		{
 			"name": "Mother Earth Wellness",
@@ -325,8 +406,8 @@
 			"type": "shopping",
 			"phone": "401-352-4300",
 			"url": "https://motherearthri.com/",
-			"latitude": 41.864745,
-			"longitude": -71.402384
+			"latitude": 41.86418182261219,
+			"longitude": -71.40268188027747
 		},
 		{
 			"name": "Factory Carpet Outlet",
@@ -334,35 +415,35 @@
 			"type": "shopping",
 			"phone": "401-723-6996",
 			"url": "https://www.factorycarpetoutlet.com/",
-			"latitude": 41.865246,
-			"longitude": -71.402353
+			"latitude": 41.86497678544388,
+			"longitude": -71.4026563633226
 		},
 		{
 			"name": "Jordan’s Jungle",
 			"address": "545 Pawtucket Ave., Pawtucket, RI 02860",
 			"type": "shopping",
 			"phone": "401-475-0100",
-			"url": "http://jordansjungle.net/",
-			"latitude": 41.859484,
-			"longitude": -71.397553
+			"url": "https://jordansjungle.net/",
+			"latitude": 41.85926601664383,
+			"longitude": -71.39859775191512
 		},
 		{
 			"name": "The Map Center",
 			"address": "545 Pawtucket Ave. MS 208 113, Pawtucket, RI 02860",
 			"type": "shopping",
 			"phone": "401-421-2184",
-			"url": "http://www.mapcenter.com/",
-			"latitude": 41.859484,
-			"longitude": -71.39785
+			"url": "https://www.mapcenter.com/",
+			"latitude": 41.859568532777985,
+			"longitude": -71.39862499566041
 		},
 		{
 			"name": "Untapped Games",
 			"address": "545 Pawtucket Ave. A205, Pawtucket, RI 02860",
 			"type": "shopping",
 			"phone": "401-368-1619",
-			"url": "http://www.untappedgames.com/",
-			"latitude": 41.859273,
-			"longitude": -71.397942
+			"url": "https://www.untappedgames.com/",
+			"latitude": 41.85902216042203,
+			"longitude": -71.39811426698343
 		},
 		{
 			"name": "Ocean State Job Lot",
@@ -370,75 +451,66 @@
 			"type": "shopping",
 			"phone": "401-475-2941",
 			"url": "https://www.oceanstatejoblot.com/store-locator/rhode-island/pawtucket/122/",
-			"latitude": 41.857865,
-			"longitude": -71.401877
-		},
-		{
-			"name": "SNIPES",
-			"address": "50 Ann Mary St., Pawtucket, RI 02860",
-			"type": "shopping",
-			"phone": "401-422-1760",
-			"url": "https://stores.snipesusa.com/ri/pawtucket/50-ann-mary-st-3002.html",
-			"latitude": 41.857865,
-			"longitude": -71.402169
+			"latitude": 41.85683289911788,
+			"longitude": -71.40195681330171
 		},
 		{
 			"name": "Lippitt Memorial Park",
 			"address": "1015 Hope St., Providence, RI 02906",
 			"type": "entertainment",
 			"url": "https://exploreri.org/gSiteReport2.php?siteID=104&src=siteList",
-			"latitude": 41.854202,
-			"longitude": -71.392386
+			"latitude": 41.85469142319315,
+			"longitude": -71.39160353340145
 		},
 		{
 			"name": "Max Read Field",
 			"address": "Pleasant St., Pawtucket, RI 02860",
 			"type": "entertainment",
 			"phone": "401-728-0500",
-			"latitude": 41.8646,
-			"longitude": -71.383
+			"latitude": 41.86514221028463,
+			"longitude": -71.38193960145368
 		},
 		{
 			"name": "Centreville Bank Stadium",
 			"address": "11 Tidewater St., Pawtucket, RI 02860",
 			"type": "entertainment",
 			"url": "https://centrevillebankstadium.com/",
-			"latitude": 41.868351,
-			"longitude": -71.383142
+			"latitude": 41.86931608673824,
+			"longitude": -71.38294250271495
 		},
 		{
 			"name": "Electromagnetic Pinball Museum and Restoration",
 			"address": "881 Main St., Pawtucket, RI 02860",
 			"type": "entertainment",
 			"phone": "401-743-8067",
-			"url": "http://www.electromagneticpinballmuseum.com/",
-			"latitude": 41.868113,
-			"longitude": -71.398928
+			"url": "https://www.electromagneticpinballmuseum.com/",
+			"latitude": 41.86816326849793,
+			"longitude": -71.3991995491825
 		},
 		{
 			"name": "The Met",
 			"address": "1005 Main St., Pawtucket, RI 02860",
 			"type": "entertainment",
 			"phone": "401-729-1005",
-			"url": "http://themetri.com/",
-			"latitude": 41.862889,
-			"longitude": -71.399161
+			"url": "https://themetri.com/",
+			"latitude": 41.863337060906,
+			"longitude": -71.39942782413742
 		},
 		{
 			"name": "Payne Park",
 			"address": "225 West Ave., Pawtucket, RI 02860",
 			"type": "entertainment",
 			"url": "https://pawtucketri.gov/parks-and-recreation/playgrounds-courts-and-parks/",
-			"latitude": 41.868711,
-			"longitude": -71.391483
+			"latitude": 41.86943199780197,
+			"longitude": -71.39172104464713
 		},
 		{
 			"name": "Oak Hill Park / Tom Duffy Recreational Center",
 			"address": "Cleveland St. at Fowler Ave., Pawtucket, RI 02860",
 			"type": "entertainment",
 			"url": "https://pawtucketri.gov/parks-and-recreation/playgrounds-courts-and-parks/",
-			"latitude": 41.864528,
-			"longitude": -71.385306
+			"latitude": 41.86382023049333,
+			"longitude": -71.38518287266204
 		},
 		{
 			"name": "Hope Artiste Village",
@@ -446,26 +518,26 @@
 			"type": "other",
 			"phone": "401-722-0752",
 			"url": "https://hopeartistevillage.com/",
-			"latitude": 41.862889,
-			"longitude": -71.399453
+			"latitude": 41.86309155908134,
+			"longitude": -71.39945479530638
 		},
 		{
 			"name": "Riverside Cemetery",
 			"address": "752 Pleasant St., Pawtucket, RI 02860",
 			"type": "other",
 			"phone": "401-725-4344",
-			"url": "http://www.riversidepawtucket.com/",
-			"latitude": 41.858347,
-			"longitude": -71.383791
+			"url": "https://www.riversidepawtucket.com/",
+			"latitude": 41.85887870631548,
+			"longitude": -71.38194758122185
 		},
 		{
 			"name": "Swan Point Cemetery",
 			"address": "585 Blackstone Blvd., Providence, RI 02906",
 			"type": "other",
 			"phone": "401-272-1314",
-			"url": "http://www.swanpointcemetery.com/",
-			"latitude": 41.851474,
-			"longitude": -71.387047
+			"url": "https://www.swanpointcemetery.com/",
+			"latitude": 41.853876309487084,
+			"longitude": -71.3860245388088
 		}
 	]
 }

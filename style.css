@@ -122,15 +122,6 @@ button {
 	border-radius: 4rem;
 	border: 1rem solid var(--primary);
 	background-color: var(--offwhite);
-	/* animation: container-in .3s cubic-bezier(0.25, 1, 0.5, 1) forwards; */
-}
-body[data-transition="1"] .home {
-	/* animation: container-out .3s cubic-bezier(0.5, 0, 0.75, 0) forwards; */
-}
-@media (prefers-reduced-motion: reduce) {
-	.home {
-		animation: none !important;
-	}
 }
 .home-marquee {
 	grid-column: 1 / -1;
@@ -208,6 +199,11 @@ body[data-transition="1"] .home {
 }
 .home-marquee-photo:nth-child(6n+6) {
 	--primary: var(--gray);
+}
+/* placeholder photos have nobody to credit, but the empty caption still has to
+   occupy a line so every figure in the marquee comes out the same height */
+.home-marquee-photo figcaption:empty::before {
+	content: "\00a0";
 }
 .home-marquee-photo figcaption {
 	font-size: max(.5rem, 12px);
@@ -416,31 +412,6 @@ body[data-transition="1"] .home {
 	height: 100dvh;
 	border-radius: 4rem;
 	overflow: auto;
-	/* animation: container-in .3s cubic-bezier(0.25, 1, 0.5, 1) forwards; */
-}
-@keyframes container-in {
-	from {
-		transform: translate(-2rem, 2rem);
-	}
-	to {
-		transform: translate(0rem, 0rem);
-	}
-}
-@keyframes container-out {
-	from {
-		transform: translate(0rem, 0rem);
-	}
-	to {
-		transform: translate(2rem, -2rem);
-	}
-}
-body[data-transition="1"] .container {
-	/* animation: container-out .3s cubic-bezier(0.5, 0, 0.75, 0) forwards; */
-}
-@media (prefers-reduced-motion: reduce) {
-	.container {
-		animation: none !important;
-	}
 }
 .nav {
 	padding: 2rem;
@@ -837,6 +808,7 @@ body[data-transition="1"] .container {
 	gap: .5rem;
 }
 .map-index-item {
+	cursor: pointer;
 	display: grid;
 	grid-template-columns: 3rem 1fr;
 	gap: 1rem;
@@ -950,7 +922,7 @@ body[data-transition="1"] .container {
 	right: 1rem;
 	z-index: 500;
 	display: flex;
-	background-color: var(--primary);
+	background-color: var(--offblack);
 	padding: .5rem;
 	border-radius: 2rem;
 	gap: .5rem;
@@ -959,8 +931,8 @@ body[data-transition="1"] .container {
 	width: 3rem;
 	height: 3rem;
 	flex-shrink: 0;
-	background-color: var(--offwhite);
-	color: var(--primary);
+	background-color: var(--primary);
+	color: var(--offblack);
 	border-radius: 50%;
 	display: flex;
 	align-items: center;
@@ -985,7 +957,7 @@ body[data-transition="1"] .container {
 	z-index: 1;
 }
 .leaflet-tile-pane {
-	filter: contrast(125%);
+	/* filter: grayscale(100%) brightness(105%); */
 }
 .leaflet-control-zoom {
 	display: none;
@@ -1017,9 +989,7 @@ body[data-transition="1"] .container {
 	transform-origin: center bottom;
 	transition: transform .3s;
 	cursor: pointer;
-}
-.leaflet-marker-icon[data-active="1"] {
-	z-index: 999 !important;
+	filter: drop-shadow(2px 2px var(--offblack));
 }
 .leaflet-marker-icon[data-active="1"] .map-pin {
 	transform: scale(1.25);
@@ -1089,9 +1059,11 @@ body[data-transition="1"] .container {
 	display: flex;
 	flex-direction: column;
 	gap: .5rem;
+	color: var(--offblack);
 }
 .map-popup-name {
 	font-size: 1.75rem;
+	line-height: 1.2em;
 }
 .map-popup-type {
 	font-size: 1.25rem;

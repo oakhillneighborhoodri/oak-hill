@@ -5,8 +5,24 @@ const mapBounds = [[41.8410, -71.4140], [41.8830, -71.3720]];
 const mapMobile = 900;
 const mapPopupOffset = [0, -44];
 
+const mapActiveZ = 100000;
+
 let neighborhoodMap;
 let mapMarkers = {};
+let mapZOrder = {};
+
+// Leaflet recomputes every marker's z-index from its rounded pixel y on each
+// frame of an animation. Pins that sit within a pixel of each other ~ the ones
+// sharing an address ~ therefore keep swapping stacking order all the way
+// through a flyTo. Ranking them once by latitude gives every tie the same
+// answer on every frame, in the order Leaflet was reaching for anyway: further
+// north sits behind, further south sits in front.
+function initMapZOrder() {
+	let ranked = mapBusinesses.slice().sort((a, b) => b.latitude - a.latitude);
+	for (let rank = 0; rank < ranked.length; rank++) {
+		mapZOrder[ranked[rank].index] = rank;
+	}
+}
 
 function pinIcon(business) {
 	return L.divIcon({
@@ -33,8 +49,12 @@ function initMap() {
 	neighborhoodMap.attributionControl.setPosition('bottomleft');
 	neighborhoodMap.setMaxBounds(mapBounds);
 
+	initMapZOrder();
 	for (let business of mapBusinesses) {
-		let marker = L.marker([business.latitude, business.longitude], {icon: pinIcon(business)}).addTo(neighborhoodMap);
+		let marker = L.marker([business.latitude, business.longitude], {
+			icon: pinIcon(business),
+			zIndexOffset: mapZOrder[business.index]
+		}).addTo(neighborhoodMap);
 		marker.on('mouseover', () => {highlightBusiness(business.index)});
 		marker.on('click', () => {selectOnMap(business.index)});
 		mapMarkers[business.index] = marker;
@@ -55,12 +75,18 @@ function clearMapHighlight() {
 	for (let pin of document.querySelectorAll('.leaflet-marker-icon')) {
 		pin.dataset.active = 0;
 	}
+	for (let index in mapMarkers) {
+		mapMarkers[index].setZIndexOffset(mapZOrder[index]);
+	}
 }
 
 function highlightBusiness(index) {
 	clearMapHighlight();
 	document.querySelector(`.map-index-item[data-index="${index}"]`).dataset.active = 1;
 	document.querySelector(`.map-pin-${index}`).dataset.active = 1;
+	// lift the highlighted pin clear of the rest, keeping its own rank as the
+	// tie-break so it never fights with a neighbour either
+	mapMarkers[index].setZIndexOffset(mapActiveZ + mapZOrder[index]);
 }
 
 function showOnMap(index) {
@@ -108,6 +134,20 @@ function showMapPopup(index) {
 	popup.getElement().style.setProperty('--primary', `var(--${business.color})`);
 }
 
+// a listing highlights and flies the map when it is clicked. this used to fire
+// on mouseenter, which yanked the map around constantly while scrolling the list.
+function initMapIndex() {
+	for (let item of document.querySelectorAll('.map-index-item')) {
+		item.addEventListener('click', (e) => {
+			// leave the address and contact links to do their own thing
+			if (e.target.closest('a')) {
+				return;
+			}
+			showOnMap(Number(item.dataset.index));
+		});
+	}
+}
+
 // leaflet focuses the map on click, which scrolls it into view
 function initMapFocus() {
 	let canvas = document.querySelector('.map-canvas');
@@ -142,5 +182,6 @@ function initMapZoom() {
 }
 
 initMap();
+initMapIndex();
 initMapFocus();
 initMapZoom();

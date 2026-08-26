@@ -72,15 +72,31 @@ function formatLink(url) {
 }
 
 // homepage
+// the marquee looks thin with only a couple of submissions, so top it up with a
+// placeholder ~ padded photos get no credit line, since nobody sent them in
+const homePhotoTarget = 10;
+const homeSamplePhoto = '/assets/uploads/sample-photo.svg';
+
+function homePhotos() {
+	let photos = readData('photos.json', 'photos');
+	while (photos.length < homePhotoTarget) {
+		photos.push({image: homeSamplePhoto});
+	}
+	return photos;
+}
+
 function marqueePhoto(photo, duplicate) {
+	// the caption element stays even with nobody to credit, so every figure in
+	// the marquee is the same height (see figcaption:empty in style.css)
+	let caption = !photo.name ? '' : `Photo submitted by ${photo.name}`;
 	return `\t\t\t\t<figure class="home-marquee-photo"${duplicate ? ' aria-hidden="true"' : ''}>
 \t\t\t\t\t<img src="${photo.image}" alt="">
-\t\t\t\t\t<figcaption>Photo submitted by ${photo.name}</figcaption>
+\t\t\t\t\t<figcaption>${caption}</figcaption>
 \t\t\t\t</figure>`;
 }
 
 function homeMarquee() {
-	let photos = readData('photos.json', 'photos');
+	let photos = homePhotos();
 	return `\t\t<div class="home-marquee">
 \t\t\t<div class="home-marquee-track">
 ${photos.map(photo => marqueePhoto(photo, false)).join('\n')}
@@ -326,7 +342,7 @@ function mapIndexItem(business) {
 		links = `
 									${links}`;
 	}
-	return `\t\t\t\t\t\t\t<div class="map-index-item" data-index="${business.index}" onmouseenter="showOnMap(${business.index});">
+	return `\t\t\t\t\t\t\t<div class="map-index-item" data-index="${business.index}">
 \t\t\t\t\t\t\t\t<div class="map-index-item-number">${business.index}</div>
 \t\t\t\t\t\t\t\t<div class="map-index-item-content">
 \t\t\t\t\t\t\t\t\t<h3 class="map-index-item-name">${business.name}</h3>
@@ -601,6 +617,7 @@ const pages = [
 	{
 		path: 'index.html',
 		url: '/',
+		description: 'A neighborhood website for Oak Hill in Pawtucket, Rhode Island ~ a community calendar, bulletin board, neighborhood map, and local business directory, all run by neighbors.',
 		name: 'Oak Hill',
 		title: 'Oak Hill, Pawtucket, RI',
 		form: 'photo',
@@ -612,6 +629,7 @@ const pages = [
 	{
 		path: 'calendar/index.html',
 		url: '/calendar/',
+		description: 'What\'s coming up in Oak Hill, Pawtucket, plus the annual Halloween Hootenanny, potluck stroll, and neighborhood garage sale.',
 		name: 'Community Calendar',
 		submit: 'Add an event!',
 		form: 'event',
@@ -623,26 +641,14 @@ const pages = [
 		scripts: ['/calendar.js']
 	},
 	{
-		path: 'map/index.html',
-		url: '/map/',
-		name: 'Neighborhood Map',
-		submit: 'Add a location!',
-		form: 'location',
-		primary: 'yellow',
-		secondary: 'orange',
-		content: mapContent,
-		head: mapHead,
-		data: mapData,
-		scripts: ['/map.js']
-	},
-	{
 		path: 'board/index.html',
 		url: '/board/',
+		description: 'The Oak Hill bulletin board ~ yard sales, performances, block parties, services, and artwork, posted by neighbors.',
 		name: 'Bulletin Board',
 		submit: 'Post to the board!',
 		form: 'post',
-		primary: 'orange',
-		secondary: 'green',
+		primary: 'yellow',
+		secondary: 'orange',
 		scripts: ['/masonry.js', '/board.js'],
 		content: () => `			<h1>Bulletin Board</h1>
 			<section class="content-intro">
@@ -675,8 +681,23 @@ ${boardPosts()}
 	</div>`
 	},
 	{
+		path: 'map/index.html',
+		url: '/map/',
+		description: 'A map of food, shopping, services, and places to go in and around the Oak Hill neighborhood of Pawtucket, Rhode Island.',
+		name: 'Neighborhood Map',
+		submit: 'Add a location!',
+		form: 'location',
+		primary: 'orange',
+		secondary: 'green',
+		content: mapContent,
+		head: mapHead,
+		data: mapData,
+		scripts: ['/map.js']
+	},
+	{
 		path: 'directory/index.html',
 		url: '/directory/',
+		description: 'Local businesses run by people who live or work in Oak Hill, Pawtucket ~ filterable by the services they offer.',
 		name: 'Business Directory',
 		submit: 'Add a business!',
 		form: 'business',
@@ -709,6 +730,7 @@ ${directoryList()}
 	{
 		path: 'about/index.html',
 		url: '/about/',
+		description: 'About the Oak Hill neighborhood, the volunteer Social Committee behind this site, and how we handle what you send us.',
 		name: 'About Oak Hill',
 		submit: 'Leave us a message!',
 		form: 'message',
@@ -757,17 +779,60 @@ ${renderMarkdown(siteContent.credits, 4)}
 ];
 
 // templates
+
+// site-wide meta defaults ~ any page can override image or imageAlt
+const siteName = 'Oak Hill';
+const siteUrl = 'https://oakhillneighborhood.com';
+const siteImage = '/assets/meta/opengraph.png';
+const siteImageAlt = 'The Oak Hill neighborhood website, Pawtucket, Rhode Island';
+
+// mirrors the palette at the top of style.css, for the theme-color tag
+const themeColors = {
+	red: '#ce305d',
+	blue: '#39acde',
+	yellow: '#e8c500',
+	orange: '#e37332',
+	green: '#84d542',
+	gray: '#ada0c2'
+};
+
+function escapeAttr(text) {
+	return escapeHtml(text).replace(/"/g, '&quot;');
+}
+
 function buildHead(page) {
-	let title = page.home ? page.title : `${page.name} | Oak Hill, Pawtucket, RI`;
+	let title = escapeAttr(page.home ? page.title : `${page.name} | Oak Hill, Pawtucket, RI`);
 	let head = page.head == undefined ? '' : `\n${page.head()}`;
+	let description = escapeAttr(page.description);
+	let url = `${siteUrl}${page.url}`;
+	// og:image has to be absolute ~ most scrapers drop a relative path
+	let image = `${siteUrl}${page.image == undefined ? siteImage : page.image}`;
+	let imageAlt = escapeAttr(page.imageAlt == undefined ? siteImageAlt : page.imageAlt);
 	return `<!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>${title}</title>
-	<link rel="icon" type="png" href="/assets/meta/favicon-${page.primary}.png">
-	<meta property="og:image" content="/assets/meta/opengraph.png">${head}
+	<meta name="description" content="${description}">
+	<link rel="canonical" href="${url}">
+	<link rel="icon" type="image/png" href="/assets/meta/favicon-${page.primary}.png">
+	<meta name="theme-color" content="${themeColors[page.primary]}">
+	<meta property="og:type" content="website">
+	<meta property="og:site_name" content="${siteName}">
+	<meta property="og:locale" content="en_US">
+	<meta property="og:url" content="${url}">
+	<meta property="og:title" content="${title}">
+	<meta property="og:description" content="${description}">
+	<meta property="og:image" content="${image}">
+	<meta property="og:image:width" content="1200">
+	<meta property="og:image:height" content="630">
+	<meta property="og:image:alt" content="${imageAlt}">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="${title}">
+	<meta name="twitter:description" content="${description}">
+	<meta name="twitter:image" content="${image}">
+	<meta name="twitter:image:alt" content="${imageAlt}">${head}
 	<link rel="stylesheet" href="/style.css">
 </head>
 <body style="--primary: var(--${page.primary}); --secondary: var(--${page.secondary});">`;
@@ -775,7 +840,7 @@ function buildHead(page) {
 
 function buildScripts(page) {
 	let scripts = page.scripts == undefined ? [] : page.scripts;
-	return scripts.concat(['/form.js', '/transition.js']).map(src => `	<script src="${src}"></script>`).join('\n');
+	return scripts.concat(['/form.js']).map(src => `	<script src="${src}"></script>`).join('\n');
 }
 
 function buildHome(page) {
